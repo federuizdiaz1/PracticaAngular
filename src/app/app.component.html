@@ -1,16 +1,31 @@
 <app-cabecera></app-cabecera>
-<h1 class="container bg-dark text-white text-center m-4 py-4">ngIf</h1>
+<h1 class="container bg-dark text-white text-center m-4 py-4">ng Practice</h1>
 
 <div class="container">
-  <p class="text-info">
+
+  <button class="btn btn-dark" (click)="activo='primero'">Primero</button>
+  <button class="btn btn-danger" (click)="activo='segundo'">Segundo</button>
+  <p class="text-info" *ngIf="show; else showDos">
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo odio recusandae, rem deserunt, sapiente facilis
   </p>
-  <p class="text-danger">
-    necessitatibus, distinctio qui cupiditate eaque esse. Vero a labore, dolores quis amet alias quia consequuntur.
+  <p class="text-info  d-none" [ngClass]="{'d-block':activo=='primero'}">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis doloribus magnam accusamus quae eius
+    nostrum voluptates dolore. Fugiat perferendis iusto optio adipisci ex ipsum sunt facere ipsa accusantium voluptas.
   </p>
+  <table class="table">
+    <tr *ngFor='let sueldo of sueldos'>
+      <th scope="row"></th>
+      <td>{{sueldo}}</td>
+    </tr>
+  </table>
+
+  <ng-template #showDos>
+    <p class="text-danger d-none" [ngClass]="{'d-block':activo =='segundo'}">
+      necessitatibus, distinctio qui cupiditate eaque esse. Vero a labore, dolores quis amet alias quia consequuntur.
+    </p>
+  </ng-template>
+
+
 </div>
-
-
-
 
 <app-footer></app-footer>
