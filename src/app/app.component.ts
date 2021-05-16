@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'Feche <3';
-  show: boolean = true;
-  sueldos = [1700, 1600, 1900];
-  fondo:any
-  activo:any
-  // showDos: boolean = true;
+
+ animales:Array<any>=[
+  {tipo:'Perro',nombre:'lisa',edad:11},
+  {tipo:'Gato',nombre:'elso',edad:1},
+  {tipo:'Pato',nombre:'mark',edad:8}
+ ]
 }
