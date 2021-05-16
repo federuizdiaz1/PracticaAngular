@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-
+import { InicioComponent } from './inicio/inicio.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ListadoComponent } from './listado/listado.component';
@@ -21,6 +21,16 @@ const routes: Routes = [
     path: 'listado',
     component: ListadoComponent,
   },
+  {
+    path: '',
+    component: InicioComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: '**',
+    redirectTo: '/',
+    pathMatch: 'full',
+  },
 ];
 @NgModule({
   declarations: [
@@ -28,6 +38,7 @@ const routes: Routes = [
     CabeceraComponent,
     FooterComponent,
     HomeComponent,
+    InicioComponent,
     CuerpoComponent,
     ContactoComponent,
     ListadoComponent,
