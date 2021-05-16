@@ -7,18 +7,20 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 
+import { CuerpoComponent } from './cuerpo/cuerpo.component';
+import { ContactoComponent } from './contacto/contacto.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    CuerpoComponent,
+    ContactoComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
