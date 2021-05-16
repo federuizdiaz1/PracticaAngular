@@ -1,0 +1,22 @@
+<div>
+  <h2>Listado</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Edad</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of animales; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.tipo}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.edad}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

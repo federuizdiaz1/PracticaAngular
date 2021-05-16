@@ -1,28 +1,10 @@
-
-<h1 class="container bg-dark text-white text-center m-4 py-4">ng Practice</h1>
 <div class="container">
-  <app-cabecera></app-cabecera>
-</div>
+  <h1 class="bg-dark text-white text-center m-4 py-4">ng Practice</h1>
 
-<div class="container">
+  <div class="container">
+    <app-cabecera></app-cabecera>
+  </div>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Tipo</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Edad</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of animales; index as i">
-        <th scope="row">{{i+1}}</th>
-        <td>{{item.tipo}}</td>
-        <td>{{item.nombre}}</td>
-        <td>{{item.edad}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <router-outlet></router-outlet>
   <app-footer></app-footer>
+</div>
