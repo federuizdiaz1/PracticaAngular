@@ -11,6 +11,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ListadoComponent } from './listado/listado.component';
+import { Page404Component } from './page404/page404.component';
 
 const routes: Routes = [
   {
@@ -22,14 +23,21 @@ const routes: Routes = [
     component: ListadoComponent,
   },
   {
-    path: '',
+    path: 'Nosotros',
+    component: ListadoComponent,
+  },
+  {
+    path: 'inicio',
     component: InicioComponent,
-    pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: '/',
+    redirectTo: 'Page404Component',
     pathMatch: 'full',
+  },
+  {
+    path: '',
+    component: Page404Component,
   },
 ];
 @NgModule({
@@ -42,6 +50,7 @@ const routes: Routes = [
     CuerpoComponent,
     ContactoComponent,
     ListadoComponent,
+    Page404Component,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
   providers: [],
